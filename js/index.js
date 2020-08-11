@@ -5,7 +5,7 @@ const navLink = document.querySelectorAll('a');
 const header2 = document.querySelectorAll('h2');
 const paragraphs = document.querySelectorAll('p');
 const images = document.querySelectorAll('img');
-const headerImage = document.querySelector('.intro');
+const navBar = document.querySelector('.main-navigation');
 
 header.addEventListener('mouseover', () => header.style.color = 'green');
 
@@ -39,3 +39,10 @@ window.addEventListener('keypress', () => navLink.forEach((el) => el.style.color
 const link = document.querySelector('a');
 
 link.addEventListener('click', ((event) => event.preventDefault()));
+
+navBar.addEventListener('click', () => navBar.style.backgroundColor = 'blue');
+
+header.addEventListener('click', (event) => {
+    event.stopPropagation();
+    event.target.style.backgroundColor = 'pink'
+});

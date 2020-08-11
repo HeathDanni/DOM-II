@@ -35,3 +35,7 @@ window.addEventListener('wheel', () => navLink.forEach((ele) => ele.style.color 
 window.addEventListener('keyup', () => paragraphs.forEach((el) => el.style.color = 'red'));
 
 window.addEventListener('keypress', () => navLink.forEach((el) => el.style.color = 'white'));
+
+const link = document.querySelector('a');
+
+link.addEventListener('click', ((event) => event.preventDefault()));
